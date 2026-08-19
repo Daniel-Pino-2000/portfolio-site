@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchor-link targets from being hidden under the sticky header. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-800 antialiased;
+  }
+
+  /* Visible focus ring for keyboard users, without adding an outline on
+     mouse click (that's what :focus-visible vs :focus buys us). */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2 ring-offset-ink-50 rounded-sm;
+  }
+}
+
+@layer utilities {
+  /* Off-screen until keyboard-focused, then pinned to the top-left corner.
+     Used by the "Skip to main content" link in App.tsx. */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-ink-900 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white;
+  }
+}
