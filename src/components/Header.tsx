@@ -49,7 +49,7 @@ export default function Header() {
           download
           className="hidden rounded-md bg-ink-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-ink-800 md:inline-block"
         >
-          Download Résumé
+          Download Resume
         </a>
 
         <button
@@ -101,7 +101,7 @@ export default function Header() {
                 className="block rounded-md bg-ink-900 px-4 py-2 text-center text-sm font-semibold text-white"
                 onClick={() => setMenuOpen(false)}
               >
-                Download Résumé
+                Download Resume
               </a>
             </li>
           </ul>

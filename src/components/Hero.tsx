@@ -38,7 +38,7 @@ export default function Hero() {
             download
             className="rounded-md border border-ink-300 bg-white px-5 py-3 text-sm font-semibold text-ink-800 transition-colors hover:border-ink-400"
           >
-            Download Résumé (PDF)
+            Download Resume (PDF)
           </a>
         </div>
       </div>
