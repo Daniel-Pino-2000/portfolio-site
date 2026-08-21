@@ -1,7 +1,7 @@
 // Single source of truth for site content, transcribed directly from
 // Daniel_Pino_Resume_Improved.pdf / .docx, except `projects`, which is
-// allowed to include newer work not yet on the resume — ordered best/most
-// recent first.
+// allowed to include newer work not yet on the resume — ordered with the
+// strongest projects first.
 
 export interface ContactInfo {
   name: string
@@ -137,6 +137,15 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    name: 'Tadu',
+    stack: ['Kotlin', 'Jetpack Compose', 'WorkManager'],
+    githubUrl: 'https://github.com/Daniel-Pino-2000/Task-Tudu',
+    description: [
+      'Developed an Android task management application using Kotlin and Jetpack Compose, integrating Firebase Authentication and Cloud Storage for secure, synced user data.',
+      'Implemented persistent local storage with the Room Persistence Library and built a task reminder system using AlarmManager and BroadcastReceiver for scheduled notifications.',
+    ],
+  },
+  {
     name: 'BiblioTech',
     stack: ['Python', 'FastAPI', 'MySQL', 'React', 'TypeScript', 'JWT'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/BiblioTech',
@@ -152,15 +161,6 @@ export const projects: ProjectItem[] = [
     description: [
       'Developing an Android Bible reading app in Kotlin and Jetpack Compose with a bundled King James Version and on-demand downloads of additional translations for fully offline reading, including full-text search, footnotes, and poem/heading formatting.',
       'Designed a repository layer that decouples the ViewModel from local SQLite and a swappable remote data source, and fixed a coroutine/SQLite threading bug by strictly separating async network I/O from batched database transactions.',
-    ],
-  },
-  {
-    name: 'Tadu',
-    stack: ['Kotlin', 'Jetpack Compose', 'WorkManager'],
-    githubUrl: 'https://github.com/Daniel-Pino-2000/Task-Tudu',
-    description: [
-      'Developed an Android task management application using Kotlin and Jetpack Compose, integrating Firebase Authentication and Cloud Storage for secure, synced user data.',
-      'Implemented persistent local storage with the Room Persistence Library and built a task reminder system using AlarmManager and BroadcastReceiver for scheduled notifications.',
     ],
   },
   {
