@@ -146,21 +146,21 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
-    name: 'BiblioTech',
-    stack: ['Python', 'FastAPI', 'MySQL', 'React', 'TypeScript', 'JWT'],
-    githubUrl: 'https://github.com/Daniel-Pino-2000/BiblioTech',
-    description: [
-      'Built a full-stack technical bookstore application with a FastAPI + MySQL REST API and a React/TypeScript frontend, implementing JWT authentication, role-based authorization, and a service-layer architecture separating routers, business logic, and ORM models.',
-      'Shipped catalog browsing/search, ratings and threaded comments, a shopping cart, and per-user wishlists, backed by Alembic-versioned migrations, a 27-test pytest suite, Docker Compose for local dev, and GitHub Actions CI.',
-    ],
-  },
-  {
     name: 'BibleApp',
     stack: ['Kotlin', 'Jetpack Compose', 'SQLite/Room', 'Coroutines'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/BibleApp',
     description: [
       'Developing an Android Bible reading app in Kotlin and Jetpack Compose with a bundled King James Version and on-demand downloads of additional translations for fully offline reading, including full-text search, footnotes, and poem/heading formatting.',
       'Designed a repository layer that decouples the ViewModel from local SQLite and a swappable remote data source, and fixed a coroutine/SQLite threading bug by strictly separating async network I/O from batched database transactions.',
+    ],
+  },
+  {
+    name: 'BiblioTech',
+    stack: ['Python', 'FastAPI', 'MySQL', 'React', 'TypeScript', 'JWT'],
+    githubUrl: 'https://github.com/Daniel-Pino-2000/BiblioTech',
+    description: [
+      'Built a full-stack technical bookstore application with a FastAPI + MySQL REST API and a React/TypeScript frontend, implementing JWT authentication, role-based authorization, and a service-layer architecture separating routers, business logic, and ORM models.',
+      'Shipped catalog browsing/search, ratings and threaded comments, a shopping cart, and per-user wishlists, backed by Alembic-versioned migrations, a 27-test pytest suite, Docker Compose for local dev, and GitHub Actions CI.',
     ],
   },
   {
