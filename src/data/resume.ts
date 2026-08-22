@@ -125,8 +125,8 @@ export const experience: ExperienceItem[] = [
     location: 'Remote',
     date: 'September 2023 – August 2024',
     bullets: [
-      'Debugged and corrected AI-generated code across 500+ tasks, writing improved reference solutions used to fine-tune model performance on code-generation tasks.',
-      'Evaluated multiple AI response variants and engineered targeted prompts to probe model reasoning, selecting optimal outputs and delivering technical feedback that measurably improved code quality.',
+      'Debugged and corrected AI-generated code across 500+ tasks, writing improved solutions used to fine-tune model performance on code-generation tasks.',
+      'Evaluated multiple AI response variants and engineered targeted prompts to test model reasoning, selecting optimal outputs and delivering technical feedback that measurably improved code quality.',
     ],
   },
 ]
