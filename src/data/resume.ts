@@ -1,5 +1,5 @@
 // Single source of truth for site content, transcribed directly from
-// Daniel_Pino_Resume_Improved.pdf / .docx, except `projects`, which is
+// Daniel_Pino_Resume_Updated.pdf / .docx, except `projects`, which is
 // allowed to include newer work not yet on the resume — ordered with the
 // strongest projects first.
 
@@ -30,7 +30,7 @@ export const contact: ContactInfo = {
 }
 
 export const summary =
-  'Computer Science graduate with hands-on experience across Android development (Kotlin, Jetpack Compose), systems and scripting (C, C++, Python), and applied AI/data work. Built and shipped four independent applications spanning task management, file search, cloud file-sharing, and game development. Comfortable working across the stack, from UI to background processing to API integration.'
+  'Computer Science graduate with hands-on experience across Android development (Kotlin, Jetpack Compose, MVVM, Coroutines/Flow), full-stack web development (Python, FastAPI, React, TypeScript), and systems and scripting (C, C++). Built and shipped four independent applications end-to-end, including two Android apps and a full-stack web platform with authentication and automated testing. Comfortable working across the stack, from UI to background processing to REST API design.'
 
 export interface SkillGroup {
   label: string
@@ -40,27 +40,30 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: 'Languages',
-    items: ['Kotlin', 'Python', 'C', 'C++', 'Java', 'SQL'],
+    items: ['Kotlin', 'Python', 'TypeScript', 'C', 'C++', 'Java', 'SQL'],
   },
   {
     label: 'Frameworks & Tools',
     items: [
       'Jetpack Compose',
-      'Git',
-      'Firebase',
+      'MVVM',
+      'Coroutines & Flow',
+      'Gradle',
+      'Room/SQLite',
       'WorkManager',
       'Ktor',
-      'Google Drive API',
-      'Pygame',
-      'SQLite/Room',
+      'FastAPI',
+      'React',
+      'Firebase',
+      'Git',
       'Claude Code',
     ],
   },
   {
     label: 'Other',
     items: [
+      'REST API design (OpenAPI, JWT/OAuth2)',
       'Object-oriented design',
-      'REST API integration',
       'Agile/collaborative dev practices',
       'Fluent in English and Spanish',
     ],
@@ -79,7 +82,7 @@ export const education: EducationItem = {
   degree: 'Bachelor of Science in Computer Science',
   school: 'Florida International University',
   location: 'Miami, FL',
-  date: 'July 2026',
+  date: 'August 2026',
   detail: 'GPA: 3.8',
 }
 
@@ -111,19 +114,19 @@ export const experience: ExperienceItem[] = [
     location: 'Homestead, FL',
     date: 'November 2024 – Present',
     bullets: [
-      'Tutor 12+ students weekly, 1-on-1 and in small groups, on programming fundamentals, algorithms, data structures, OOP, and debugging.',
-      'Design and deliver hands-on programming workshops, translating abstract CS concepts into practical exercises for students at varying skill levels.',
-      'Build rapport with students by breaking down complex technical topics clearly, contributing to improved grades and higher course engagement.',
+      'Tutor 12+ students weekly, one-on-one and in small groups, on programming fundamentals, algorithms, data structures, object-oriented design, and debugging.',
+      'Design and deliver hands-on programming workshops that translate abstract CS concepts into practical exercises tailored to students at varying skill levels.',
+      'Break down complex technical topics into clear, approachable explanations, building rapport that contributes to improved grades and higher course engagement.',
     ],
   },
   {
     role: 'AI Trainer (Remote)',
     organization: 'Remotask & DataAnnotation',
     location: 'Remote',
-    date: 'March 2024 – August 2024',
+    date: 'September 2023 – August 2024',
     bullets: [
-      'Annotated and reviewed 500+ tasks across datasets to improve NLP and code-generation model performance, evaluating outputs for accuracy and reliability.',
-      'Provided structured technical feedback on model responses, contributing to measurable improvements in output quality for programming-related tasks.',
+      'Debugged and corrected AI-generated code across 500+ tasks, writing improved reference solutions used to fine-tune model performance on code-generation tasks.',
+      'Evaluated multiple AI response variants and engineered targeted prompts to probe model reasoning, selecting optimal outputs and delivering technical feedback that measurably improved code quality.',
     ],
   },
 ]
@@ -147,10 +150,10 @@ export const projects: ProjectItem[] = [
   },
   {
     name: 'BibleApp',
-    stack: ['Kotlin', 'Jetpack Compose', 'SQLite/Room', 'Coroutines'],
+    stack: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Coroutines', 'SQLite/Room'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/BibleApp',
     description: [
-      'Developing an Android Bible reading app in Kotlin and Jetpack Compose with a bundled King James Version and on-demand downloads of additional translations for fully offline reading, including full-text search, footnotes, and poem/heading formatting.',
+      'Built an Android Bible reading app in Kotlin and Jetpack Compose with a bundled King James Version and on-demand downloads of additional translations for fully offline reading, including full-text search, footnotes, and poem/heading formatting.',
       'Designed a repository layer that decouples the ViewModel from local SQLite and a swappable remote data source, and fixed a coroutine/SQLite threading bug by strictly separating async network I/O from batched database transactions.',
     ],
   },
@@ -159,7 +162,7 @@ export const projects: ProjectItem[] = [
     stack: ['Python', 'FastAPI', 'MySQL', 'React', 'TypeScript', 'JWT'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/BiblioTech',
     description: [
-      'Built a full-stack technical bookstore application with a FastAPI + MySQL REST API and a React/TypeScript frontend, implementing JWT authentication, role-based authorization, and a service-layer architecture separating routers, business logic, and ORM models.',
+      'Built a full-stack technical bookstore application with a FastAPI + MySQL REST API (auto-generated OpenAPI docs) and a React/TypeScript frontend, implementing JWT authentication, role-based authorization, and a service-layer architecture separating routers, business logic, and ORM models.',
       'Shipped catalog browsing/search, ratings and threaded comments, a shopping cart, and per-user wishlists, backed by Alembic-versioned migrations, a 27-test pytest suite, Docker Compose for local dev, and GitHub Actions CI.',
     ],
   },
