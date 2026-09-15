@@ -141,8 +141,8 @@ export interface ProjectItem {
 export const projects: ProjectItem[] = [
   {
     name: 'Tadu',
-    stack: ['Kotlin', 'Jetpack Compose', 'WorkManager'],
-    githubUrl: 'https://github.com/Daniel-Pino-2000/Task-Tudu',
+    stack: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Room'],
+    githubUrl: 'https://github.com/Daniel-Pino-2000/Tadu',
     description: [
       'Developed an Android task management application using Kotlin and Jetpack Compose, integrating Firebase Authentication and Cloud Storage for secure, synced user data.',
       'Implemented persistent local storage with the Room Persistence Library and built a task reminder system using AlarmManager and BroadcastReceiver for scheduled notifications.',
@@ -155,6 +155,7 @@ export const projects: ProjectItem[] = [
     description: [
       'Built an Android Bible reading app in Kotlin and Jetpack Compose with a bundled King James Version and on-demand downloads of additional translations for fully offline reading, including full-text search, footnotes, and poem/heading formatting.',
       'Designed a repository layer that decouples the ViewModel from local SQLite and a swappable remote data source, and fixed a coroutine/SQLite threading bug by strictly separating async network I/O from batched database transactions.',
+      'In active development: a Ktor backend (Exposed ORM, JWT authentication, PostgreSQL) for user accounts and cross-device sync of bookmarks, reading progress, and notes.',
     ],
   },
   {
@@ -168,10 +169,11 @@ export const projects: ProjectItem[] = [
   },
   {
     name: 'FastFinder',
-    stack: ['Kotlin', 'File I/O', 'Coroutines', 'SQLite/Room'],
+    stack: ['Kotlin', 'Compose Desktop', 'Apache Lucene', 'Coroutines'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/FastFinder',
     description: [
-      'Built a Windows file and folder search application in Kotlin that indexes local storage in the background on first run, then supports incremental database updates and custom directory search with advanced filtering by file type and size — all while allowing concurrent search during indexing.',
+      'Built a Windows desktop app (Kotlin, Jetpack Compose Desktop) that indexes local storage into an Apache Lucene index in a parallel, work-stealing fork-join walk, cutting indexing time roughly in half over a single-threaded walk on a 28-core benchmark, and supports live re-indexing, custom directory search, and filtering/sorting without blocking concurrent search.',
+      'Made index rebuilds crash-safe by writing to a fresh temp directory and swapping it in with a single directory rename (rolling back on failure), and added opt-in NTFS USN Journal reads for instant incremental updates instead of a full rescan. Shipped with CI (unit tests + detekt static analysis) and a packaged MSI installer.',
     ],
   },
   {
