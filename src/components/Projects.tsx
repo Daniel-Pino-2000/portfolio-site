@@ -21,15 +21,10 @@ export default function Projects() {
                   {project.downloadUrl && (
                     <a
                       href={project.downloadUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
                       className="inline-flex items-center gap-1.5 rounded-md bg-accent-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-accent-500"
                     >
                       Download
-                      <span className="sr-only">
-                        {' '}
-                        ({project.name} installer, opens in new tab)
-                      </span>
+                      <span className="sr-only"> ({project.name} installer, .msi)</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
