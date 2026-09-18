@@ -17,31 +17,60 @@ export default function Projects() {
             >
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold text-ink-950">{project.name}</h3>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-ink-300 px-3 py-1.5 text-xs font-semibold text-ink-700 transition-colors hover:border-ink-400 hover:text-ink-950"
-                >
-                  GitHub
-                  <span className="sr-only">
-                    {' '}
-                    ({project.name} repository, opens in new tab)
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-3.5 w-3.5"
-                    aria-hidden="true"
+                <div className="flex shrink-0 items-center gap-2">
+                  {project.downloadUrl && (
+                    <a
+                      href={project.downloadUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 rounded-md bg-accent-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-accent-500"
+                    >
+                      Download
+                      <span className="sr-only">
+                        {' '}
+                        ({project.name} installer, opens in new tab)
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-3.5 w-3.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                      </svg>
+                    </a>
+                  )}
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-ink-300 px-3 py-1.5 text-xs font-semibold text-ink-700 transition-colors hover:border-ink-400 hover:text-ink-950"
                   >
-                    <path d="M7 17 17 7M7 7h10v10" />
-                  </svg>
-                </a>
+                    GitHub
+                    <span className="sr-only">
+                      {' '}
+                      ({project.name} repository, opens in new tab)
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-3.5 w-3.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10" />
+                    </svg>
+                  </a>
+                </div>
               </div>
 
               <ul className="flex flex-wrap gap-2">

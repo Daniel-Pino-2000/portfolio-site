@@ -135,6 +135,7 @@ export interface ProjectItem {
   name: string
   stack: string[]
   githubUrl: string
+  downloadUrl?: string
   description: string[]
 }
 
@@ -171,6 +172,7 @@ export const projects: ProjectItem[] = [
     name: 'FastFinder',
     stack: ['Kotlin', 'Compose Desktop', 'Apache Lucene', 'Coroutines'],
     githubUrl: 'https://github.com/Daniel-Pino-2000/FastFinder',
+    downloadUrl: 'https://github.com/Daniel-Pino-2000/FastFinder/releases/latest',
     description: [
       'Built a Windows desktop app (Kotlin, Jetpack Compose Desktop) that indexes local storage into an Apache Lucene index in a parallel, work-stealing fork-join walk, cutting indexing time roughly in half over a single-threaded walk on a 28-core benchmark, and supports live re-indexing, custom directory search, and filtering/sorting without blocking concurrent search.',
       'Made index rebuilds crash-safe by writing to a fresh temp directory and swapping it in with a single directory rename (rolling back on failure), and added opt-in NTFS USN Journal reads for instant incremental updates instead of a full rescan. Shipped with CI (unit tests + detekt static analysis) and a packaged MSI installer.',
