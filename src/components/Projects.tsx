@@ -13,10 +13,18 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="flex flex-col gap-4 rounded-xl border border-ink-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className={`flex flex-col gap-4 rounded-xl border border-ink-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md${project.featured ? ' sm:col-span-2' : ''}`}
             >
               <div className="flex items-start justify-between gap-3">
-                <h3 className="text-lg font-semibold text-ink-950">{project.name}</h3>
+                <div className="flex flex-col items-start gap-1.5">
+                  <h3 className="text-lg font-semibold text-ink-950">{project.name}</h3>
+                  {project.status && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-50 px-2.5 py-0.5 text-xs font-semibold text-accent-700 ring-1 ring-inset ring-accent-200">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden="true" />
+                      {project.status}
+                    </span>
+                  )}
+                </div>
                 <div className="flex shrink-0 items-center gap-2">
                   {project.downloadUrl && (
                     <a
@@ -87,6 +95,22 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
+
+              {project.inProgress && project.inProgress.length > 0 && (
+                <div className="mt-auto rounded-lg border border-dashed border-ink-300 bg-ink-50 p-4">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-ink-500">
+                    In progress
+                  </h4>
+                  <ul className="mt-2 flex flex-col gap-1.5 text-sm text-ink-700">
+                    {project.inProgress.map((item) => (
+                      <li key={item} className="flex gap-2.5">
+                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-500" aria-hidden="true" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </article>
           ))}
         </div>

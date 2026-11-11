@@ -18,9 +18,12 @@ export default {
           50: '#f8fafc',
         },
         accent: {
+          700: '#1d4ed8',
           600: '#2563eb',
           500: '#3b82f6',
           400: '#60a5fa',
+          200: '#bfdbfe',
+          50: '#eff6ff',
         },
       },
       fontFamily: {
