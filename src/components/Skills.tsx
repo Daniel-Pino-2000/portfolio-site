@@ -9,7 +9,7 @@ export default function Skills() {
       <div className="mx-auto max-w-content px-6 py-20">
         <SectionHeading id="skills-heading" eyebrow="Skills" title="Technical Toolbox" />
 
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
             <div key={group.label}>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-500">

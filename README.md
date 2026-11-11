@@ -1,8 +1,9 @@
 # Daniel Pino — Portfolio
 
 Personal portfolio/resume site built with React, TypeScript, Vite, and Tailwind CSS.
-All content is sourced from `Daniel_Pino_Resume_Improved` and lives in one typed
-file: `src/data/resume.ts`. Update that file (and the PDF in `public/`) to keep
+All content is sourced from the latest general resume
+(`Daniel_Pino_Resume_Standard_2026-11-11`) and lives in one typed file:
+`src/data/resume.ts`. Update that file (and the PDF in `public/`) to keep
 the site in sync with your resume.
 
 ## Getting started
