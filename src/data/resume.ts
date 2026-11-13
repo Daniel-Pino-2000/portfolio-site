@@ -142,6 +142,17 @@ export const honors: Honor[] = [
   },
 ]
 
+export interface Certification {
+  name: string
+  issuer: string
+  date: string
+}
+
+export const certifications: Certification[] = [
+  { name: 'Associate Developer (ODC)', issuer: 'OutSystems', date: 'February 2026' },
+  { name: 'Professional Communications', issuer: 'Southwest Airlines', date: 'June 2026' },
+]
+
 export interface ExperienceItem {
   role: string
   organization: string
